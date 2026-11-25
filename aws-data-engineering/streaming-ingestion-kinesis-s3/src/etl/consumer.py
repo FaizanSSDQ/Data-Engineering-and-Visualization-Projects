@@ -84,52 +84,50 @@ def poll_shards(kinesis, shard_iterators, kinesis_dest_stream_names):
                         f"Read User Session {user_session} from Shard {shard_itr.shard_id} at position {record['SequenceNumber']}"
                     )
 
-                    ### START CODE HERE ### 
                     # Performing small transformation and putting record into a new kinesis data stream
                     try:
                         # Instructions are in the step 2.2.3.
-                        None[
-                            "None"
-                        ] = None.None.now()
+                        user_session[
+                            "processing_timestamp"
+                        ] = datetime.datetime.now()
 
                         # Instructions are in the step 2.2.4.
-                        None = None
-                        None = None
+                        overall_product_quantity = 0
+                        overall_in_shopping_cart = 0
 
                         for product in user_session["browse_history"]:
                             # Instructions are in the step 2.2.5.
-                            None += None(
-                                None["None"]
+                            overall_product_quantity += int(
+                                product["quantity"]
                             )
 
                             # Instructions are in the step 2.2.6.
-                            if None["None"] == True:
-                                None += None(
-                                    None["None"]
+                            if product["in_shopping_cart"] == True:
+                                overall_in_shopping_cart += int(
+                                    product["quantity"]
                                 ) 
 
                         # Instructions are in the step 2.2.7.
-                        None[
-                            "None"
-                        ] = None
-                        None[
-                            "None"
-                        ] = None
+                        user_session[
+                            "overall_product_quantity"
+                        ] = overall_product_quantity
+                        user_session[
+                            "overall_in_shopping_cart"
+                        ] = overall_in_shopping_cart
 
-                        None["None"] = len(
-                            None["None"]
+                        user_session["total_different_products"] = len(
+                            user_session["browse_history"]
                         )
                         
                         # execute single PutRecord request
                         response = kinesis.put_record(
                             StreamName=kinesis_dest_stream_names["USA"]
-
+                            
                             # Instructions are in the step 2.2.8.
-                            if None["None"] == "USA"
-                            else None[
+                            if user_session["country"] == "USA"
+                            else kinesis_dest_stream_names[
                                 "International"
                             ],
-                    ### END CODE HERE ###
                             Data=json.dumps(
                                 user_session, default=serialize_datetime
                             ).encode("utf-8"),

@@ -1,5 +1,8 @@
 # **Real-Time Data Ingestion with Amazon Kinesis Data Streams**  
 
+> 🎓 Hands-on lab completed during the **DeepLearning.AI & AWS Data Engineering** program on Coursera. Lab environment and starter material by DeepLearning.AI; implementation and write-up by Faizan Saleem Siddiqui.
+
+
 ## **Overview**  
 This project focuses on **real-time data ingestion** using **Amazon Kinesis Data Streams**. The goal is to build a streaming data pipeline that efficiently collects, processes, and routes data in real time.  
 
@@ -75,4 +78,26 @@ Through this lab, we gained a deeper understanding of **event-driven architectur
 
 🚀 **Next Steps**: You can further enhance this project by integrating **AWS Lambda** for serverless processing, incorporating **Amazon OpenSearch Service** for real-time search analytics, or exploring **AWS Glue** for additional ETL capabilities.  
 
-Happy coding! 🎯  
+Happy coding! 🎯
+
+---
+## 👤 About the Author
+
+**Faizan Saleem Siddiqui**, Embedded Firmware Engineer | Research Scholar
+
+Electronics engineer with 2+ years of experience in embedded systems and firmware development.
+I build production firmware for **BLE wearables and biosignal devices** on Nordic nRF52 (Zephyr / nRF
+Connect SDK), including **secure OTA updates (MCUboot, signed images)**, **low-power battery
+management** and **true-wireless Bluetooth audio**. My background also covers STM32 and ESP32 with
+FreeRTOS, real-time data acquisition, digital signal processing, industrial IoT, and Python tooling
+for data, automation and machine learning.
+
+- 🎓 MS Electronics, Quaid-i-Azam University, Islamabad (BS Electronics: 1st position, merit scholar)
+- 🧑‍🏫 Former Visiting Faculty, Embedded Systems, and Research Assistant, Autonomous Vehicles (COMSIP Lab)
+- 🌍 Open to embedded / firmware engineering opportunities worldwide
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Faizan%20Saleem%20Siddiqui-0A66C2?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/faizan-saleem-siddiqui-4411bb247/)
+[![GitHub](https://img.shields.io/badge/GitHub-FaizanSSDQ-181717?logo=github&logoColor=white)](https://github.com/FaizanSSDQ)
+[![Email](https://img.shields.io/badge/Email-faizansaleemsdq%40gmail.com-D14836?logo=gmail&logoColor=white)](mailto:faizansaleemsdq@gmail.com)
+
+Licensed under the [MIT License](../../LICENSE) (lab starter material © DeepLearning.AI).
