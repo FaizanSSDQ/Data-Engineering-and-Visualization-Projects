@@ -70,7 +70,7 @@ This project provided hands-on experience in implementing DataOps principles usi
 ---
 ## 👤 About the Author
 
-**Faizan Saleem Siddiqui**, Embedded Firmware Engineer | Research Scholar
+**Faizan Saleem Siddiqui**, Embedded Firmware Engineer | Visiting Faculty | Research Scholar
 
 Electronics engineer with 2+ years of experience in embedded systems and firmware development.
 I build production firmware for **BLE wearables and biosignal devices** on Nordic nRF52 (Zephyr / nRF
@@ -80,7 +80,9 @@ FreeRTOS, real-time data acquisition, digital signal processing, industrial IoT,
 for data, automation and machine learning.
 
 - 🎓 MS Electronics, Quaid-i-Azam University, Islamabad (BS Electronics: 1st position, merit scholar)
-- 🧑‍🏫 Former Visiting Faculty, Embedded Systems, and Research Assistant, Autonomous Vehicles (COMSIP Lab)
+- 🧑‍🏫 Visiting Faculty Member, Quaid-i-Azam University: teaching Real-Time Systems (STM32, FreeRTOS),
+  Microcontroller Interfacing (ESP32) and AI/ML on Embedded Devices (TinyML)
+- 🔬 Former Research Assistant, Autonomous Vehicle Engineering (COMSIP Lab, QAU)
 - 🌍 Open to embedded / firmware engineering opportunities worldwide
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Faizan%20Saleem%20Siddiqui-0A66C2?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/faizan-saleem-siddiqui-4411bb247/)
