@@ -1,13 +1,21 @@
+"""
+Batch ingestion job: Spotify new releases -> album tracks -> timestamped JSON file.
+
+Usage:
+    cp env.example env   # then add your own Spotify app credentials
+    python main.py
+
+Author : Faizan Saleem Siddiqui (https://github.com/FaizanSSDQ)
+Built during the DeepLearning.AI & AWS Data Engineering Professional Certificate.
+"""
+
 import datetime as dt
 import json
 import os
 
-from dotenv import load_dotenv
-from endpoint import (
-    get_paginated_new_releases,
-    get_paginated_album_tracks,
-)
 from authentication import get_token
+from dotenv import load_dotenv
+from endpoint import get_paginated_album_tracks, get_paginated_new_releases
 
 load_dotenv("./env", override=True)
 
@@ -51,18 +59,14 @@ def main():
 
     album_items = {}
 
-    ### Exercise 6
-    ### START CODE HERE ### (~ 9 lines of code)
     for album_id in albums_ids:
         album_data = get_paginated_album_tracks(
-            base_url=None,
-            access_token=token.None("None"),
-            album_id=None,
-            get_token=None,
-            **None,
+            base_url=URL_ALBUM_TRACKS,
+            access_token=token.get("access_token"),
+            album_id=album_id,
+            get_token=get_token,
+            **kwargs,
         )
-    ### END CODE HERE ###
-
         album_items[album_id] = album_data
 
         print(f"Album {album_id} has been processed successfully")

@@ -1,5 +1,8 @@
 # Spotify API Data Pipeline Project
 
+> 🎓 Hands-on lab completed during the **DeepLearning.AI & AWS Data Engineering** program on Coursera. Lab environment and starter material by DeepLearning.AI; implementation and write-up by Faizan Saleem Siddiqui.
+
+
 Welcome to one of my Projects. I am Faizan Saleem Siddiqui, an AI/ML Engineer, specialized in NLP, Computer Version, and Autonomous Vehicles Engineering. You can learn more about me on at my linkedin:4
 <br>
 https://www.linkedin.com/in/faizan-saleem-siddiqui-4411bb247/
@@ -97,10 +100,32 @@ In this project, I:
 2. Install the required dependencies:
    pip install -r requirements.txt
 
-3. Set up your Spotify API credentials in the `src/env` file.
+3. Copy `src/env.example` to `src/env` and add your own Spotify API credentials (never commit this file).
 
 
 ## Conclusion
 This project provides a practical introduction to building data pipelines using APIs, with a focus on handling real-world challenges like pagination, token refresh, and rate limits. It serves as a foundation for more advanced data engineering projects and demonstrates the importance of robust, scalable solutions in the industry.
 
 Feel free to explore the code, extend the pipeline, and adapt it to your specific use cases!
+
+---
+## 👤 About the Author
+
+**Faizan Saleem Siddiqui**, Embedded Firmware Engineer | Research Scholar
+
+Electronics engineer with 2+ years of experience in embedded systems and firmware development.
+I build production firmware for **BLE wearables and biosignal devices** on Nordic nRF52 (Zephyr / nRF
+Connect SDK), including **secure OTA updates (MCUboot, signed images)**, **low-power battery
+management** and **true-wireless Bluetooth audio**. My background also covers STM32 and ESP32 with
+FreeRTOS, real-time data acquisition, digital signal processing, industrial IoT, and Python tooling
+for data, automation and machine learning.
+
+- 🎓 MS Electronics, Quaid-i-Azam University, Islamabad (BS Electronics: 1st position, merit scholar)
+- 🧑‍🏫 Former Visiting Faculty, Embedded Systems, and Research Assistant, Autonomous Vehicles (COMSIP Lab)
+- 🌍 Open to embedded / firmware engineering opportunities worldwide
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Faizan%20Saleem%20Siddiqui-0A66C2?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/faizan-saleem-siddiqui-4411bb247/)
+[![GitHub](https://img.shields.io/badge/GitHub-FaizanSSDQ-181717?logo=github&logoColor=white)](https://github.com/FaizanSSDQ)
+[![Email](https://img.shields.io/badge/Email-faizansaleemsdq%40gmail.com-D14836?logo=gmail&logoColor=white)](mailto:faizansaleemsdq@gmail.com)
+
+Licensed under the [MIT License](../../LICENSE) (lab starter material © DeepLearning.AI).

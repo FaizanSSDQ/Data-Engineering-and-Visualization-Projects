@@ -1,3 +1,10 @@
+"""
+Spotify client-credentials authentication helpers.
+
+Author : Faizan Saleem Siddiqui (https://github.com/FaizanSSDQ)
+Built during the DeepLearning.AI & AWS Data Engineering Professional Certificate.
+"""
+
 import json
 from typing import Any, Dict
 
