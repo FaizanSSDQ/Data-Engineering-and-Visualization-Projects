@@ -23,7 +23,6 @@ data "aws_ami" "latest_ami" {
   }
 }
 
-### START CODE HERE ### (~ 21 lines of code)
 
 # Create an AWS key pair, associating the public
 # key you created in the first resource in this file
@@ -63,4 +62,3 @@ resource "aws_instance" "bastion_host" {
   }
 }
 
-### END CODE HERE ###

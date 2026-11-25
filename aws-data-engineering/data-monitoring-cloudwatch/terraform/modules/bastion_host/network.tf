@@ -19,7 +19,6 @@ data "aws_subnet" "private_subnet_b" {
   id = var.private_subnet_b_id
 }
 
-### END CODE HERE ###
 
 resource "aws_security_group" "bastion_host" {
   vpc_id = data.aws_vpc.main.id

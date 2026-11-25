@@ -135,7 +135,6 @@ resource "aws_sns_topic_subscription" "cloudwatch_email_sub" {
 }
 
 # RDS Alert
-### START CODE HERE ### (~ 15 lines of code)
 resource "aws_cloudwatch_metric_alarm" "RdsCpuUsage" {
   alarm_name          = "${var.project}-rds-status"
   comparison_operator = "GreaterThanThreshold"
@@ -152,4 +151,3 @@ resource "aws_cloudwatch_metric_alarm" "RdsCpuUsage" {
     DBInstanceIdentifier = var.rds_instance_id
   }
 }
-### END CODE HERE ###

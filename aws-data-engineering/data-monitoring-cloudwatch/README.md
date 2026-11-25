@@ -1,5 +1,8 @@
 # AWS Infrastructure Monitoring with CloudWatch and SNS
 
+> 🎓 Hands-on lab completed during the **DeepLearning.AI & AWS Data Engineering** program on Coursera. Lab environment and starter material by DeepLearning.AI; implementation and write-up by Faizan Saleem Siddiqui.
+
+
 This project focuses on implementing robust monitoring and alerting for an AWS infrastructure involving a bastion host and an RDS database. By leveraging Amazon CloudWatch and SNS, we ensure the reliability and availability of critical resources.
 
 ## Project Description
@@ -77,3 +80,25 @@ Contributions are welcome! Please feel free to submit pull requests or open issu
 ## Conclusion
 
 This project successfully demonstrates the implementation of robust monitoring and alerting mechanisms for a critical AWS infrastructure. By leveraging CloudWatch, SNS, and best practices in infrastructure management, we have established a proactive approach to ensuring the availability and reliability of our systems. The insights gained from this project, including the use of `sysbench` for performance testing and RDS Performance Insights for database monitoring, can be applied to other AWS environments, enhancing overall operational efficiency and minimizing downtime. This project not only reinforces the importance of proactive monitoring but also provides a practical guide for setting up similar systems in production environments.
+
+---
+## 👤 About the Author
+
+**Faizan Saleem Siddiqui**, Embedded Firmware Engineer | Research Scholar
+
+Electronics engineer with 2+ years of experience in embedded systems and firmware development.
+I build production firmware for **BLE wearables and biosignal devices** on Nordic nRF52 (Zephyr / nRF
+Connect SDK), including **secure OTA updates (MCUboot, signed images)**, **low-power battery
+management** and **true-wireless Bluetooth audio**. My background also covers STM32 and ESP32 with
+FreeRTOS, real-time data acquisition, digital signal processing, industrial IoT, and Python tooling
+for data, automation and machine learning.
+
+- 🎓 MS Electronics, Quaid-i-Azam University, Islamabad (BS Electronics: 1st position, merit scholar)
+- 🧑‍🏫 Former Visiting Faculty, Embedded Systems, and Research Assistant, Autonomous Vehicles (COMSIP Lab)
+- 🌍 Open to embedded / firmware engineering opportunities worldwide
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Faizan%20Saleem%20Siddiqui-0A66C2?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/faizan-saleem-siddiqui-4411bb247/)
+[![GitHub](https://img.shields.io/badge/GitHub-FaizanSSDQ-181717?logo=github&logoColor=white)](https://github.com/FaizanSSDQ)
+[![Email](https://img.shields.io/badge/Email-faizansaleemsdq%40gmail.com-D14836?logo=gmail&logoColor=white)](mailto:faizansaleemsdq@gmail.com)
+
+Licensed under the [MIT License](../../LICENSE) (lab starter material © DeepLearning.AI).
