@@ -1,5 +1,8 @@
 # Automated Data Validation with Great Expectations on AWS
 
+> 🎓 Hands-on lab completed during the **DeepLearning.AI & AWS Data Engineering** program on Coursera. Lab environment and starter material by DeepLearning.AI; implementation and write-up by Faizan Saleem Siddiqui.
+
+
 This project demonstrates the implementation of automated data validation using Great Expectations on AWS, ensuring data quality and reliability in a production environment.
 
 ## Project Description
@@ -68,3 +71,25 @@ This repository is licensed under the MIT License - see the LICENSE file for det
 ## Conclusion
 
 This project provides a practical example of how to implement automated data validation using Great Expectations on AWS. By leveraging reusable expectation suites and Checkpoint objects, we can ensure data quality and reliability in a production environment. The integration with AWS S3 for Data Docs storage enhances documentation and artifact management, making this project a valuable resource for data engineering teams.
+
+---
+## 👤 About the Author
+
+**Faizan Saleem Siddiqui**, Embedded Firmware Engineer | Research Scholar
+
+Electronics engineer with 2+ years of experience in embedded systems and firmware development.
+I build production firmware for **BLE wearables and biosignal devices** on Nordic nRF52 (Zephyr / nRF
+Connect SDK), including **secure OTA updates (MCUboot, signed images)**, **low-power battery
+management** and **true-wireless Bluetooth audio**. My background also covers STM32 and ESP32 with
+FreeRTOS, real-time data acquisition, digital signal processing, industrial IoT, and Python tooling
+for data, automation and machine learning.
+
+- 🎓 MS Electronics, Quaid-i-Azam University, Islamabad (BS Electronics: 1st position, merit scholar)
+- 🧑‍🏫 Former Visiting Faculty, Embedded Systems, and Research Assistant, Autonomous Vehicles (COMSIP Lab)
+- 🌍 Open to embedded / firmware engineering opportunities worldwide
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Faizan%20Saleem%20Siddiqui-0A66C2?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/faizan-saleem-siddiqui-4411bb247/)
+[![GitHub](https://img.shields.io/badge/GitHub-FaizanSSDQ-181717?logo=github&logoColor=white)](https://github.com/FaizanSSDQ)
+[![Email](https://img.shields.io/badge/Email-faizansaleemsdq%40gmail.com-D14836?logo=gmail&logoColor=white)](mailto:faizansaleemsdq@gmail.com)
+
+Licensed under the [MIT License](../../LICENSE) (lab starter material © DeepLearning.AI).
