@@ -9,9 +9,6 @@ Welcome to the Titanic Data Visualization Project! This project aims to explore 
 3. [Project Structure](#project-structure)
 4. [Getting Started](#getting-started)
 5. [Libraries Used](#libraries-used)
-6. [Contributing](#contributing)
-7. [License](#license)
-8. [Contact](#contact)
 
 ## Overview
 
@@ -36,33 +33,32 @@ The project consists of a Jupyter Notebook, where you'll find step-by-step analy
    - Multiplot Grids: Analyzing passenger survival rates across different demographics.
 3. **Insights and Conclusions**: Summarizing key findings and trends observed from the visualizations.
 
-## Getting Started
+## Run it
+```bash
+git clone https://github.com/FaizanSSDQ/Data-Engineering-and-Visualization-Projects.git
+cd Data-Engineering-and-Visualization-Projects/data-analysis/titanic-data-visualization
+pip install -r requirements.txt
+jupyter notebook Data_Visualization_with_Python.ipynb
+```
 
-To run this project locally:
+---
+## 👤 About the Author
 
-1. **Clone the repository**: Use `git clone https://github.com/yourusername/titanic-data-visualization.git`
-2. **Navigate to the project folder**: `cd titanic-data-visualization`
-3. **Open the Jupyter Notebook**: Run `jupyter notebook` and open `titanic_visualization_notebook.ipynb` to follow along with the analyses.
+**Faizan Saleem Siddiqui**, Embedded Firmware Engineer | Research Scholar
 
-## Libraries Used
+Electronics engineer with 2+ years of experience in embedded systems and firmware development.
+I build production firmware for **BLE wearables and biosignal devices** on Nordic nRF52 (Zephyr / nRF
+Connect SDK), including **secure OTA updates (MCUboot, signed images)**, **low-power battery
+management** and **true-wireless Bluetooth audio**. My background also covers STM32 and ESP32 with
+FreeRTOS, real-time data acquisition, digital signal processing, industrial IoT, and Python tooling
+for data, automation and machine learning.
 
-This project utilizes several Python libraries for data manipulation and visualization:
+- 🎓 MS Electronics, Quaid-i-Azam University, Islamabad (BS Electronics: 1st position, merit scholar)
+- 🧑‍🏫 Former Visiting Faculty, Embedded Systems, and Research Assistant, Autonomous Vehicles (COMSIP Lab)
+- 🌍 Open to embedded / firmware engineering opportunities worldwide
 
-- **pandas**: For data manipulation and analysis.
-- **matplotlib**: For creating static, animated, and interactive visualizations.
-- **seaborn**: For making statistical graphics and enhancing data visualization.
-- **numpy**: For numerical operations and support.
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Faizan%20Saleem%20Siddiqui-0A66C2?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/faizan-saleem-siddiqui-4411bb247/)
+[![GitHub](https://img.shields.io/badge/GitHub-FaizanSSDQ-181717?logo=github&logoColor=white)](https://github.com/FaizanSSDQ)
+[![Email](https://img.shields.io/badge/Email-faizansaleemsdq%40gmail.com-D14836?logo=gmail&logoColor=white)](mailto:faizansaleemsdq@gmail.com)
 
-## Contributing
-
-Contributions are welcome! If you would like to enhance this project or suggest new features, please fork the repository and submit a pull request. Feel free to open issues for any bugs or feature requests.
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-## Contact
-
-For any inquiries, suggestions, or feedback, please reach out:
-
-Your Name - Faizan Saleem Siddiqui, Visiting Faculty Member, Quaid-i-Azam University Islamabad 
+Licensed under the [MIT License](../../LICENSE).
