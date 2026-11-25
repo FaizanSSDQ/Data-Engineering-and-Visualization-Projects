@@ -65,21 +65,32 @@ The EDA performed in this project includes the following steps:
 - **Model Evaluation**: Use appropriate metrics (e.g., accuracy, precision, recall) to evaluate model performance.
 
 
-## Prerequisites
-- Python 3.x
-- Jupyter Notebook
-- Libraries: pandas, numpy, matplotlib, seaborn, scikit-learn
-
-## Installation
+## Run it
 ```bash
+git clone https://github.com/FaizanSSDQ/Data-Engineering-and-Visualization-Projects.git
+cd Data-Engineering-and-Visualization-Projects/data-analysis/heart-disease-eda
 pip install -r requirements.txt
+jupyter notebook Heart_Disease_EDA_DataAnalysis.ipynb
 ```
 
-## Contributing
-Contributions are welcome! If you have any suggestions or want to improve this project, feel free to open an issue or submit a pull request.
+---
+## 👤 About the Author
 
+**Faizan Saleem Siddiqui**, Embedded Firmware Engineer | Research Scholar
 
+Electronics engineer with 2+ years of experience in embedded systems and firmware development.
+I build production firmware for **BLE wearables and biosignal devices** on Nordic nRF52 (Zephyr / nRF
+Connect SDK), including **secure OTA updates (MCUboot, signed images)**, **low-power battery
+management** and **true-wireless Bluetooth audio**. My background also covers STM32 and ESP32 with
+FreeRTOS, real-time data acquisition, digital signal processing, industrial IoT, and Python tooling
+for data, automation and machine learning.
 
+- 🎓 MS Electronics, Quaid-i-Azam University, Islamabad (BS Electronics: 1st position, merit scholar)
+- 🧑‍🏫 Former Visiting Faculty, Embedded Systems, and Research Assistant, Autonomous Vehicles (COMSIP Lab)
+- 🌍 Open to embedded / firmware engineering opportunities worldwide
 
-## License
-Feel free to customize or add more details if needed!
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Faizan%20Saleem%20Siddiqui-0A66C2?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/faizan-saleem-siddiqui-4411bb247/)
+[![GitHub](https://img.shields.io/badge/GitHub-FaizanSSDQ-181717?logo=github&logoColor=white)](https://github.com/FaizanSSDQ)
+[![Email](https://img.shields.io/badge/Email-faizansaleemsdq%40gmail.com-D14836?logo=gmail&logoColor=white)](mailto:faizansaleemsdq@gmail.com)
+
+Licensed under the [MIT License](../../LICENSE).
