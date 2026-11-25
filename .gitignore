@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.venv/
+venv/
+env/
+*.egg-info/
+
+# Secrets
+.env
+*.key
+
+# Data / model caches
+.cache/
+*.ckpt
+
+# OS / editors
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+
+# Local credential files (use env.example templates)
+env
+.env
