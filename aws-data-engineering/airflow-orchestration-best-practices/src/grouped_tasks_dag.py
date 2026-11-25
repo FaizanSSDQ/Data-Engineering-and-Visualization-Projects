@@ -106,9 +106,7 @@ with DAG(
                 },
             )
     
-            ############################# START OF EXERCISE 9 #############################
             
-            ### START CODE HERE ### (2 lines of code)
             # Use the `>>` operator to define relation between the tasks 
             # `extract_load_task` and `transform_task`
             extract_load_task >> transform_task
@@ -117,7 +115,6 @@ with DAG(
             # using append() method
             task_group.append(etl_tg)
             
-            ############################## END OF EXERCISE 9 ##############################
 
     notification_task = PythonOperator(
         task_id="notification",
@@ -129,10 +126,6 @@ with DAG(
     end_task = DummyOperator(task_id="end")
 
 
-    ############################# START OF EXERCISE 10 #############################
 
-    ### START CODE HERE ### (1 line of code)
     (start_task >> task_group >> notification_task >> end_task)
-    ### END CODE HERE ###
 
-    ############################## END OF EXERCISE 9 ##############################

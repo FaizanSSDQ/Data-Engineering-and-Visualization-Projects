@@ -42,27 +42,22 @@ def drop_nas_and_duplicates(
 
     df = pd.read_csv(source_s3_uri)
 
-############################# START OF EXERCISE 4 #############################
 
-    ### START CODE HERE ### (~ 5 lines of code)
     # Apply `dropna()` method to the dataframe `df`
-    df = df.None()
+    df = df.dropna()
     
     # Apply `drop_duplicates()` method to the dataframe `df`
-    df = df.None()
+    df = df.drop_duplicates()
 
     df.to_csv(target_s3_uri)
     
     # Find number of the valid records with the function `len()`
-    num_valid_records = None(None)
+    num_valid_records = len(df)
     
     # Use `xcom_push` method passing the number of the valid records
-    context["ti"].None(key="valid_records", value=None)
-    ### END CODE HERE ###
+    context["ti"].xcom_push(key="valid_records", value=num_valid_records)
 
-############################## END OF EXERCISE 4 ##############################
 
-############################# START OF EXERCISE 6 #############################
 
 def notify_valid_records(table: str, **context: Context):
     """This function is used to notify about the number of valid records in a
@@ -73,115 +68,88 @@ def notify_valid_records(table: str, **context: Context):
         context: dict: Airflow context.
     """
 
-    ### START CODE HERE ### (1 line of code)
-    # Use `xcom_pull()` method passing previously defined as`task_id` 
+    # Use `xcom_pull()` method passing previously defined as `task_id` 
     task_id = f"transform_{table}"
-    valid_records = context["ti"].None(task_ids=None, key="valid_records")
-    ### END CODE HERE ###
+    valid_records = context["ti"].xcom_pull(task_ids=task_id, key="valid_records")
 
     print(f"Number of valid records in table {table}: {valid_records}")
     
-############################## END OF EXERCISE 6 ##############################
 
-############################# START OF EXERCISE 1 #############################
 
 with DAG(
     dag_id="simple_dag",
     
-    ### START CODE HERE ### (~ 6 lines of code)
     # Set the `schedule` equal to `"@daily"` to run DAG daily
-    schedule="@None",
+    schedule="@daily",
     
     # Set the `start_date` as a `datetime` object representing the date at which
     # you're taking the lab
-    start_date=dt.datetime(year=None, month=None, day=None),
-    ### END CODE HERE ###
+    start_date=dt.datetime(year=2025, month=1, day=1),
     
     catchup=False,
 ) as dag:
-    ############################## END OF EXERCISE 1 ##############################
 
-    ############################# START OF EXERCISE 2 #############################
     
-    ### START CODE HERE ### (~ 3 lines of code)
     partition_date = (
         # Use the built-in variable `ds` to specify the partition date in 
         # the format "YYYY/MM/DD", which should be passed as "%Y/%m/%d"
         # "%Y-%m-%d" represents the input format
-        '{{ macros.ds_format(None, "%Y-%m-%d", "None") }}'
+        '{{ macros.ds_format(ds, "%Y-%m-%d", "%Y/%m/%d") }}'
     )
-    ### END CODE HERE ###
     
-    ############################## END OF EXERCISE 2 ##############################
     
     start_task = DummyOperator(task_id="start")
     
-    ############################# START OF EXERCISE 3 #############################
 
-    ### START CODE HERE ### (~ 8 lines of code)
     extract_and_load_task = SqlToS3Operator(
         task_id="extract_and_load_orders",
         
         # Pass the connection ID, which should be the same connection ID you 
         # specified while creating the connection in the Airflow UI
-        sql_conn_id="None",
+        sql_conn_id="mysql_connection",
         
         # Set the query value
-        query="None None None None;",
+        query="SELECT * FROM orders;",
         
         # Use method `get()` requesting the `s3_bucket` name
-        s3_bucket=Variable.None("None"), 
+        s3_bucket=Variable.get("s3_bucket"), 
         s3_key=f"bronze/{partition_date}/orders.csv",
         replace=True,
     )
-    ### END CODE HERE ###
 
-    ############################## END OF EXERCISE 3 ##############################
     
-    ############################# START OF EXERCISE 5 #############################
     
-    ### START CODE HERE ### (10 lines of code)
     transform_task = PythonOperator(
         task_id="transform_orders",
         
         # Pass the `drop_nas_and_duplicates` function defined above
-        python_callable=None,
+        python_callable=drop_nas_and_duplicates,
         
         provide_context=True,
         op_kwargs={
             
             # Use method `get()` requesting the `s3_bucket` name
-            "source_bucket": Variable.None("None"), 
+            "source_bucket": Variable.get("s3_bucket"), 
             "source_key": f"bronze/{partition_date}/orders.csv",
             "target_key": f"silver/{partition_date}/orders.csv", 
         },
     )
-    ### END CODE HERE ###
     
-    ############################## END OF EXERCISE 5 ##############################
-
-    ############################# START OF EXERCISE 7 #############################
     
-    ### START CODE HERE ### (6 lines of code)
+    
     notification_task = PythonOperator(
         task_id="notification",
         
         # Pass previously defined function `notify_valid_records`
-        python_callable=None, 
+        python_callable=notify_valid_records, 
         
         provide_context=True,
         op_kwargs={"table": "orders"},
     )
-    ### END CODE HERE ###
     
-    ############################## END OF EXERCISE 7 ##############################
 
     end_task = DummyOperator(task_id="end")
+
     
-    ############################# START OF EXERCISE 8 #############################
+    (start_task >> extract_and_load_task >> transform_task >> notification_task >> end_task)
     
-    ### START CODE HERE ### (1 line of code)
-    (None >> None >> None >> None >> None)
-    ### END CODE HERE ###
-    
-    ############################## END OF EXERCISE 8 ##############################
