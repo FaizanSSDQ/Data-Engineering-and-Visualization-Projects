@@ -2,7 +2,6 @@ resource "random_id" "master_password" {
   byte_length = 8
 }
 
-### START CODE HERE ### (~ 20 lines of code)
 # Create a db subnet group using the private
 # subnets of AZ A and B
 resource "aws_db_subnet_group" "database" {
@@ -30,5 +29,3 @@ resource "aws_db_instance" "database" {
   publicly_accessible = false
   skip_final_snapshot = true
 }
-
-### END CODE HERE ###

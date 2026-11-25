@@ -18,10 +18,9 @@ variable "vpc_id" {
   description = "The id of the VPC to use"
 }
 
-### START CODE HERE ### (~ 16 lines of code)
 
 # Define a variable `public_subnet_id` of type 
-# string for the id of the public subnet 
+# string for the id of the public subnet
 variable "public_subnet_id" {
   type        = string
   description = "The id of the public subnet in the availability zone A"
@@ -43,7 +42,6 @@ variable "private_subnet_b_id" {
   description = "The id of the private subnet in the availability zone B"
 }
 
-### END CODE HERE ###
 
 variable "db_master_username" {
   type        = string

@@ -2,7 +2,6 @@ output "project" {
   value = var.project
 }
 
-### START CODE HERE ### (~ 19 lines of code)
 
 # Define an output for the id of the EC2
 # instance
@@ -36,5 +35,3 @@ output "db_master_password" {
   value     = aws_db_instance.database.password
   sensitive = true
 }
-
-### END CODE HERE ###

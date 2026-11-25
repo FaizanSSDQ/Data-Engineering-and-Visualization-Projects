@@ -2,27 +2,25 @@ data "aws_vpc" "main" {
   id = var.vpc_id
 }
 
-### START CODE HERE ### (~ 12 lines of code)
 
 # Create a data source for the public subnet 
 # using the corresponding variable
 data "aws_subnet" "public_subnet" {
-  id = var.None
+  id = var.public_subnet_id
 }
 
 # Create a data source for the private subnet in
 # the AZ A using the corresponding variable
-data "None" "None" {
-  id = None.None
+data "aws_subnet" "private_subnet_a" {
+  id = var.private_subnet_a_id
 }
 
 # Create a data source for the private subnet in
 # the AZ B using the corresponding variable
-data "None" "None" {
-  id = None.None
+data "aws_subnet" "private_subnet_b" {
+  id = var.private_subnet_b_id
 }
 
-### END CODE HERE ###
 
 resource "aws_security_group" "bastion_host" {
   vpc_id = data.aws_vpc.main.id
